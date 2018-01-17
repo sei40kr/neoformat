@@ -44,6 +44,14 @@ function! neoformat#formatters#javascript#prettier() abort
         \ }
 endfunction
 
+function! neoformat#formatters#javascript#prettier_d() abort
+    return {
+        \ 'exe': 'prettier_d',
+        \ 'args': ['--stdin', '--stdin-filepath', '%:p'],
+        \ 'stdin': 1,
+        \ }
+endfunction
+
 function! neoformat#formatters#javascript#prettiereslint() abort
     return {
         \ 'exe': 'prettier-eslint',
